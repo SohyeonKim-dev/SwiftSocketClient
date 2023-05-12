@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		553FE2992A0E018B00A07B87 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 553FE2982A0E018B00A07B87 /* SocketIO */; };
+		1D0E57FFFFD8131B29DD4575 /* Pods_SwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D855996BD30BF3D9BFECD5B /* Pods_SwiftSocket.framework */; };
 		55446CCE2A0A3E9D0005F5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CCD2A0A3E9D0005F5CC /* AppDelegate.swift */; };
 		55446CD02A0A3E9D0005F5CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CCF2A0A3E9D0005F5CC /* SceneDelegate.swift */; };
 		55446CD72A0A3E9F0005F5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55446CD62A0A3E9F0005F5CC /* Assets.xcassets */; };
 		55446CDA2A0A3E9F0005F5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55446CD82A0A3E9F0005F5CC /* LaunchScreen.storyboard */; };
-		55446CE22A0A42E30005F5CC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CE12A0A42E30005F5CC /* UIViewController.swift */; };
+		55446CE22A0A42E30005F5CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CE12A0A42E30005F5CC /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,10 @@
 		55446CD62A0A3E9F0005F5CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55446CD92A0A3E9F0005F5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55446CDB2A0A3E9F0005F5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55446CE12A0A42E30005F5CC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		55446CE12A0A42E30005F5CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7182248CA644501E4F09EEA3 /* Pods-SwiftSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSocket.release.xcconfig"; path = "Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket.release.xcconfig"; sourceTree = "<group>"; };
+		8D855996BD30BF3D9BFECD5B /* Pods_SwiftSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB74025030570EBF1368DA4 /* Pods-SwiftSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSocket.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553FE2992A0E018B00A07B87 /* SocketIO in Frameworks */,
+				1D0E57FFFFD8131B29DD4575 /* Pods_SwiftSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,8 @@
 			children = (
 				55446CCC2A0A3E9D0005F5CC /* SwiftSocket */,
 				55446CCB2A0A3E9D0005F5CC /* Products */,
+				E7607C80E4D727DE0E6BAA07 /* Pods */,
+				6DFB42EF9879D370A009A5C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,12 +63,29 @@
 			children = (
 				55446CCD2A0A3E9D0005F5CC /* AppDelegate.swift */,
 				55446CCF2A0A3E9D0005F5CC /* SceneDelegate.swift */,
-				55446CE12A0A42E30005F5CC /* UIViewController.swift */,
+				55446CE12A0A42E30005F5CC /* MainViewController.swift */,
 				55446CD62A0A3E9F0005F5CC /* Assets.xcassets */,
 				55446CD82A0A3E9F0005F5CC /* LaunchScreen.storyboard */,
 				55446CDB2A0A3E9F0005F5CC /* Info.plist */,
 			);
 			path = SwiftSocket;
+			sourceTree = "<group>";
+		};
+		6DFB42EF9879D370A009A5C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D855996BD30BF3D9BFECD5B /* Pods_SwiftSocket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7607C80E4D727DE0E6BAA07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCB74025030570EBF1368DA4 /* Pods-SwiftSocket.debug.xcconfig */,
+				7182248CA644501E4F09EEA3 /* Pods-SwiftSocket.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,18 +95,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55446CDE2A0A3E9F0005F5CC /* Build configuration list for PBXNativeTarget "SwiftSocket" */;
 			buildPhases = (
+				CA76519270CC679A7CAD0B2F /* [CP] Check Pods Manifest.lock */,
 				55446CC62A0A3E9D0005F5CC /* Sources */,
 				55446CC72A0A3E9D0005F5CC /* Frameworks */,
 				55446CC82A0A3E9D0005F5CC /* Resources */,
+				6F4220D8277646CF92ED9E4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftSocket;
-			packageProductDependencies = (
-				553FE2982A0E018B00A07B87 /* SocketIO */,
-			);
 			productName = SwiftSocket;
 			productReference = 55446CCA2A0A3E9D0005F5CC /* SwiftSocket.app */;
 			productType = "com.apple.product-type.application";
@@ -114,9 +135,6 @@
 				Base,
 			);
 			mainGroup = 55446CC12A0A3E9D0005F5CC;
-			packageReferences = (
-				553FE2972A0E018B00A07B87 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
-			);
 			productRefGroup = 55446CCB2A0A3E9D0005F5CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +156,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F4220D8277646CF92ED9E4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA76519270CC679A7CAD0B2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftSocket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55446CC62A0A3E9D0005F5CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,7 +205,7 @@
 			files = (
 				55446CCE2A0A3E9D0005F5CC /* AppDelegate.swift in Sources */,
 				55446CD02A0A3E9D0005F5CC /* SceneDelegate.swift in Sources */,
-				55446CE22A0A42E30005F5CC /* UIViewController.swift in Sources */,
+				55446CE22A0A42E30005F5CC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +339,7 @@
 		};
 		55446CDF2A0A3E9F0005F5CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB74025030570EBF1368DA4 /* Pods-SwiftSocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,7 +350,6 @@
 				INFOPLIST_FILE = SwiftSocket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,6 +368,7 @@
 		};
 		55446CE02A0A3E9F0005F5CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7182248CA644501E4F09EEA3 /* Pods-SwiftSocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,7 +379,6 @@
 				INFOPLIST_FILE = SwiftSocket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,25 +416,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		553FE2972A0E018B00A07B87 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		553FE2982A0E018B00A07B87 /* SocketIO */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 553FE2972A0E018B00A07B87 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
-			productName = SocketIO;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55446CC22A0A3E9D0005F5CC /* Project object */;
 }
