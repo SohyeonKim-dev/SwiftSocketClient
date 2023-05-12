@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		553B437C2A0A51B900DE018C /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 553B43772A0A51B900DE018C /* ytcpsocket.c */; };
-		553B437F2A0A51B900DE018C /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B437A2A0A51B900DE018C /* ysocket.swift */; };
-		553B43802A0A51B900DE018C /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B437B2A0A51B900DE018C /* ytcpsocket.swift */; };
+		553FE2992A0E018B00A07B87 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 553FE2982A0E018B00A07B87 /* SocketIO */; };
 		55446CCE2A0A3E9D0005F5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CCD2A0A3E9D0005F5CC /* AppDelegate.swift */; };
 		55446CD02A0A3E9D0005F5CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CCF2A0A3E9D0005F5CC /* SceneDelegate.swift */; };
 		55446CD72A0A3E9F0005F5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55446CD62A0A3E9F0005F5CC /* Assets.xcassets */; };
@@ -18,9 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		553B43772A0A51B900DE018C /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
-		553B437A2A0A51B900DE018C /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
-		553B437B2A0A51B900DE018C /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
 		55446CCA2A0A3E9D0005F5CC /* SwiftSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55446CCD2A0A3E9D0005F5CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55446CCF2A0A3E9D0005F5CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,22 +30,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553FE2992A0E018B00A07B87 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		553B43762A0A50F700DE018C /* Socket */ = {
-			isa = PBXGroup;
-			children = (
-				553B437A2A0A51B900DE018C /* ysocket.swift */,
-				553B43772A0A51B900DE018C /* ytcpsocket.c */,
-				553B437B2A0A51B900DE018C /* ytcpsocket.swift */,
-			);
-			path = Socket;
-			sourceTree = "<group>";
-		};
 		55446CC12A0A3E9D0005F5CC = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +56,6 @@
 		55446CCC2A0A3E9D0005F5CC /* SwiftSocket */ = {
 			isa = PBXGroup;
 			children = (
-				553B43762A0A50F700DE018C /* Socket */,
 				55446CCD2A0A3E9D0005F5CC /* AppDelegate.swift */,
 				55446CCF2A0A3E9D0005F5CC /* SceneDelegate.swift */,
 				55446CE12A0A42E30005F5CC /* UIViewController.swift */,
@@ -97,6 +82,9 @@
 			dependencies = (
 			);
 			name = SwiftSocket;
+			packageProductDependencies = (
+				553FE2982A0E018B00A07B87 /* SocketIO */,
+			);
 			productName = SwiftSocket;
 			productReference = 55446CCA2A0A3E9D0005F5CC /* SwiftSocket.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +114,9 @@
 				Base,
 			);
 			mainGroup = 55446CC12A0A3E9D0005F5CC;
+			packageReferences = (
+				553FE2972A0E018B00A07B87 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 55446CCB2A0A3E9D0005F5CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,11 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553B437F2A0A51B900DE018C /* ysocket.swift in Sources */,
 				55446CCE2A0A3E9D0005F5CC /* AppDelegate.swift in Sources */,
-				553B43802A0A51B900DE018C /* ytcpsocket.swift in Sources */,
 				55446CD02A0A3E9D0005F5CC /* SceneDelegate.swift in Sources */,
-				553B437C2A0A51B900DE018C /* ytcpsocket.c in Sources */,
 				55446CE22A0A42E30005F5CC /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		553FE2972A0E018B00A07B87 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		553FE2982A0E018B00A07B87 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 553FE2972A0E018B00A07B87 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55446CC22A0A3E9D0005F5CC /* Project object */;
 }
