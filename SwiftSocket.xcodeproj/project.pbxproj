@@ -13,6 +13,7 @@
 		55446CD72A0A3E9F0005F5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55446CD62A0A3E9F0005F5CC /* Assets.xcassets */; };
 		55446CDA2A0A3E9F0005F5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55446CD82A0A3E9F0005F5CC /* LaunchScreen.storyboard */; };
 		55446CE22A0A42E30005F5CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55446CE12A0A42E30005F5CC /* MainViewController.swift */; };
+		55DDE0EF2A1222BB006B32AB /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDE0EE2A1222BB006B32AB /* SocketIOManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		55446CD92A0A3E9F0005F5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55446CDB2A0A3E9F0005F5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55446CE12A0A42E30005F5CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55DDE0EE2A1222BB006B32AB /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		7182248CA644501E4F09EEA3 /* Pods-SwiftSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSocket.release.xcconfig"; path = "Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket.release.xcconfig"; sourceTree = "<group>"; };
 		8D855996BD30BF3D9BFECD5B /* Pods_SwiftSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB74025030570EBF1368DA4 /* Pods-SwiftSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSocket.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSocket/Pods-SwiftSocket.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		55446CCC2A0A3E9D0005F5CC /* SwiftSocket */ = {
 			isa = PBXGroup;
 			children = (
+				55DDE0ED2A1220DD006B32AB /* SocketManger */,
 				55446CCD2A0A3E9D0005F5CC /* AppDelegate.swift */,
 				55446CCF2A0A3E9D0005F5CC /* SceneDelegate.swift */,
 				55446CE12A0A42E30005F5CC /* MainViewController.swift */,
@@ -69,6 +72,14 @@
 				55446CDB2A0A3E9F0005F5CC /* Info.plist */,
 			);
 			path = SwiftSocket;
+			sourceTree = "<group>";
+		};
+		55DDE0ED2A1220DD006B32AB /* SocketManger */ = {
+			isa = PBXGroup;
+			children = (
+				55DDE0EE2A1222BB006B32AB /* SocketIOManager.swift */,
+			);
+			path = SocketManger;
 			sourceTree = "<group>";
 		};
 		6DFB42EF9879D370A009A5C5 /* Frameworks */ = {
@@ -204,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55446CCE2A0A3E9D0005F5CC /* AppDelegate.swift in Sources */,
+				55DDE0EF2A1222BB006B32AB /* SocketIOManager.swift in Sources */,
 				55446CD02A0A3E9D0005F5CC /* SceneDelegate.swift in Sources */,
 				55446CE22A0A42E30005F5CC /* MainViewController.swift in Sources */,
 			);
