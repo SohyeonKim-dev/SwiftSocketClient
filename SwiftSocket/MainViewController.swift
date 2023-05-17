@@ -34,6 +34,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
         let textView = UITextView()
         textView.textColor = .black
         textView.font = .systemFont(ofSize: 15, weight: .regular)
+        textView.text = "풀스택 서비스 네트워킹 APP"
         
         textView.isUserInteractionEnabled = false
         textView.layer.cornerRadius = 0

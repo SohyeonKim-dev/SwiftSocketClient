@@ -6,6 +6,7 @@ target 'SwiftSocket' do
   use_frameworks!
 
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  pod 'SwiftNIO'
   # Pods for SwiftSocket
 
   post_install do |installer|
