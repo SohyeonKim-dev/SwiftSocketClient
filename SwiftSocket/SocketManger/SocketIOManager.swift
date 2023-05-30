@@ -14,13 +14,14 @@ class SocketIOManager: NSObject {
     var socket: SocketIOClient!
     static let shared = SocketIOManager()
     
-    var manager = SocketManager(socketURL: URL(string: "http://\(HOST):\(PORT)")!, config: [.log(true), .compress])
+    var manager = SocketManager(socketURL: (URL(string: "localhost:\(PORT)")!), config: [.log(true), .compress])
     
     override init() {
         super.init()
-        socket = self.manager.socket(forNamespace: "/test")
+        socket = self.manager.socket(forNamespace: "/event")
         
-        socket.on("test") { dataArray, ack in
+        // recieve data
+        socket.on("event") { dataArray, ack in
             print(dataArray)
         }
     }
@@ -28,6 +29,8 @@ class SocketIOManager: NSObject {
     func establishConnection() {
         print("echo-client is activated")
         socket.connect()
+        print("status: \(socket.status)")
+        // print("socketURL: \(socket.manager?.socketURL)")
     }
     
     func closeConnection() {
@@ -36,9 +39,7 @@ class SocketIOManager: NSObject {
     }
    
     func sendMessage(message: String, nickname: String) {
-        socket.emit("event",  ["message" : ">"])
+        let sendMsg = ">"
+        socket.emit("event",  with: [sendMsg])
     }
-    
-    // TODO: recieve data code
 }
-
