@@ -11,14 +11,39 @@ import NIO
 class UDPEchoHandler: ChannelInboundHandler  {
     typealias InboundIn = ByteBuffer
     typealias OutboundOut = ByteBuffer
-    
-    public func channelActive(context: ChannelHandlerContext) {
-        // TODO: implementation func 
+    private var numBytes = 0
+    private let remoteAddressInitializer: () throws -> SocketAddress
+
+    init(remoteAddressInitializer: @escaping () throws -> SocketAddress) {
+        self.remoteAddressInitializer = remoteAddressInitializer
     }
     
+    public func channelActive(context: ChannelHandlerContext) {
+          do {
+              let remoteAddress = try self.remoteAddressInitializer()
+              let buffer = context.channel.allocator.buffer(string: "")
+              self.numBytes = buffer.readableBytes
+              _ = AddressedEnvelope<ByteBuffer>(remoteAddress: remoteAddress, data: buffer)
+                            
+          } catch {
+              print("Could not resolve remote address")
+          }
+      }
+    
     public func channelRead(context: ChannelHandlerContext, data: NIOAny) {
-//        let envelope = self.unwrapInboundIn(data)
-//        let byteBuffer = envelope
+        let envelope = self.unwrapInboundIn(data)
+        let byteBuffer = envelope
+        
+        self.numBytes -= byteBuffer.readableBytes
+        
+        if self.numBytes <= 0 {
+            let string = String(buffer: byteBuffer)
+            print("> received: \(string)")
+            
+            if (string == "quit") {
+                context.close(promise: nil)
+            }
+        }
     }
 }
 
