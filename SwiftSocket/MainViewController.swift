@@ -63,6 +63,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        // TCP connection
         self.socket = SocketIOManager.shared.socket
         SocketIOManager.shared.establishConnection()
         
